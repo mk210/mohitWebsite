@@ -1,0 +1,33 @@
+// myColor scheme
+$black: #333333;
+$softBlue: #8685ef;
+$white: #faf8ff;
+$gray: #4a4857;
+
+html {
+  background-color: #333333;
+}
+.Main {
+  color: $white !important;
+  background-color: $black !important;
+  font-family: "Montserrat Alternates", sans-serif;
+  border-radius: 20px;
+  // margin-left: auto;
+  // margin-right: auto;
+  padding: 20px;
+  margin-top: 20vh;
+  // border: 5px solid #292929;
+}
+
+#subtitle {
+  color: $softBlue;
+}
+
+#courseButton {
+  color: $white;
+  background-color: $softBlue;
+  padding: 8px 10px 8px 10px;
+  border-radius: 10px;
+  margin: 2px;
+  margin-bottom: 20px;
+}
