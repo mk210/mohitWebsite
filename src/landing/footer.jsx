@@ -20,8 +20,16 @@ class Footer extends Component {
           variant="body2"
           style={{ fontFamily: "open sans, san-serif" }}
         >
-          Made with ♥ by Mohit Katta. This website is licensed under the MIT
-          license
+          Made with ♥ by <b>Mohit Katta</b>. The source code is licensed{" "}
+          <a
+            href="https://opensource.org/licenses/MIT"
+            rel="noreferrer"
+            target="_blank"
+            style={{ color: "#faf8ff" }}
+          >
+            MIT
+          </a>
+          .
         </Typography>
       </Box>
     );
