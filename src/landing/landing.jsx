@@ -5,6 +5,7 @@ import "../App.scss";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import AlternateEmailRoundedIcon from "@material-ui/icons/AlternateEmailRounded";
 class Landing extends Component {
   render() {
     return (
@@ -74,8 +75,11 @@ class Landing extends Component {
           >
             <LinkedInIcon fontSize="small" style={{ color: "#faf8ff" }} />
           </IconButton>
-          <IconButton target="_blank">
-            <InstagramIcon fontSize="small" style={{ color: "#faf8ff" }} />
+          <IconButton target="_blank" href="mailto:mohit.kvs1@gmail.com">
+            <AlternateEmailRoundedIcon
+              fontSize="small"
+              style={{ color: "#faf8ff" }}
+            />
           </IconButton>
         </div>
       </>

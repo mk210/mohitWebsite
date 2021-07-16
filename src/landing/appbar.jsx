@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import React, { Component } from "react";
-
+import "../App.scss";
 function NavBarButton(props) {
   return (
     <Grid item>
@@ -23,20 +23,7 @@ function NavBarButton(props) {
 class AppBar extends Component {
   render() {
     return (
-      <Grid
-        container
-        direction="row"
-        style={{
-          color: "#faf8ff",
-          background: "#292929",
-          padding: "10px",
-          maxWidth: "fit-content",
-          borderRadius: "10px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          display: "flex",
-        }}
-      >
+      <Grid container direction="row" className="AppBar">
         <NavBarButton name="Projects" />
         <NavBarButton name="Experience" />
         <NavBarButton name="Blog" />
