@@ -34,7 +34,7 @@ html {
 
 .AppBar {
   color: #faf8ff;
-  background: #292929;
+  background: #272727;
   padding: 10px;
   max-width: fit-content;
   border-radius: 10px;
@@ -45,4 +45,13 @@ html {
 .AppBar:hover {
   transition-duration: 0.5s;
   box-shadow: 0px 20px 250px rgba(255, 255, 255, 0.1);
+}
+
+.AppBarOther {
+  color: #faf8ff;
+  background: #272727;
+  padding: 10px;
+  max-width: fit-content;
+  border-radius: 10px;
+  display: flex;
 }

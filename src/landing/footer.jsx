@@ -10,7 +10,7 @@ class Footer extends Component {
           left: 0,
           bottom: 0,
           width: "100%",
-          backgroundColor: "#292929",
+          backgroundColor: "#272727",
           color: "#faf8ff",
           textAlign: "center",
           padding: "5px",

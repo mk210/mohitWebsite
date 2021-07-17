@@ -7,6 +7,7 @@ import Footer from "./landing/footer";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PageNotFound from "./404";
+import ProjectsPage from "./projects/projectsPage";
 function App() {
   return (
     <Router>
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/notes">
           <Section1 />
+        </Route>
+        <Route exact path="/projects">
+          <ProjectsPage />
         </Route>
         <Route path="*">
           <PageNotFound />

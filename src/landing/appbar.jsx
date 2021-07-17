@@ -9,6 +9,7 @@ function NavBarButton(props) {
           color: "#faf8ff",
           margin: "0px 2px 0px 2px",
         }}
+        href={props.href}
       >
         <Typography
           variant="button"
@@ -24,7 +25,7 @@ class AppBar extends Component {
   render() {
     return (
       <Grid container direction="row" className="AppBar">
-        <NavBarButton name="Projects" />
+        <NavBarButton name="Projects" href="/projects" />
         <NavBarButton name="Experience" />
         <NavBarButton name="Blog" />
       </Grid>
