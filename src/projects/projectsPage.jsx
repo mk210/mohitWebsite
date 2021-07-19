@@ -33,7 +33,7 @@ class ProjectsPage extends Component {
             variant="contained"
             style={{
               color: "#faf8ff",
-              backgroundColor: "#292929",
+              backgroundColor: "#4a4857",
               borderRadius: "10px",
               width: "fit-content",
               marginRight: "5px",
