@@ -12,6 +12,8 @@ import {
 import { GitHub, ShareRounded } from "@material-ui/icons";
 import React, { Component } from "react";
 import "../App.scss";
+import ProjectsPage from "./projectsPage";
+import { projects } from "../content";
 
 function SingleElement(props) {
   return (
@@ -30,16 +32,26 @@ function SingleElement(props) {
           backgroundColor: "#202020",
         }}
       >
-        <Typography
-          variant="body2"
+        <div
           style={{
-            color: "#8685ef",
-            fontSize: "15px",
-            fontFamily: "Montserrat Alternates, sans-serif",
+            padding: "2px 5px 2px 5px",
+            backgroundColor: "#4a4857",
+            borderRadius: "20px",
+            width: "fit-content",
           }}
         >
-          {"Project Subtitle - Date".toLowerCase()}
-        </Typography>
+          <Typography
+            variant="body2"
+            style={{
+              color: "#8685ef",
+              fontSize: "12px",
+              fontFamily: "Montserrat Alternates, sans-serif",
+            }}
+          >
+            {props.language}
+          </Typography>
+        </div>
+        <Box m={0.5} />
         <Typography
           variant="h4"
           style={{
@@ -48,7 +60,7 @@ function SingleElement(props) {
             fontFamily: "Open Sans, sans-serif",
           }}
         >
-          Project Title
+          {props.title}
         </Typography>
         <Box m={1} />
         <Divider light style={{ backgroundColor: "#4a4857" }} />
@@ -61,8 +73,10 @@ function SingleElement(props) {
             fontFamily: "Open Sans, sans-serif",
           }}
         >
-          About the project. Some synopsis, or what it was made for or whatever
+          {props.desc}
+          {/* A Max of 84 characters are allowed in the project synopsis */}
         </Typography>
+
         <Box m={1} />
 
         {/* <CardActions> */}
@@ -75,6 +89,7 @@ function SingleElement(props) {
             border: "1px solid #faf8ff",
           }}
           target="_blank"
+          href={props.github}
           startIcon={<GitHub />}
         >
           <Typography
@@ -96,6 +111,7 @@ function SingleElement(props) {
     </Grid>
   );
 }
+
 class SingleProject extends Component {
   render() {
     return (
@@ -108,12 +124,16 @@ class SingleProject extends Component {
           }}
         >
           <Grid container direction="row">
-            <SingleElement />
-            <SingleElement />
-            <SingleElement />
-            <SingleElement />
-            <SingleElement />
-            <SingleElement />
+            {projects.map((project) => {
+              return (
+                <SingleElement
+                  language={project.language}
+                  title={project.title}
+                  desc={project.desc}
+                  github={project.github}
+                />
+              );
+            })}
           </Grid>
         </Typography>
       </Box>
