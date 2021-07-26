@@ -8,6 +8,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PageNotFound from "./404";
 import ProjectsPage from "./projects/projectsPage";
+import Experience from "./experience/expPage";
 function App() {
   return (
     <Router>
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path="/projects">
           <ProjectsPage />
+        </Route>
+        <Route exact path="/experience">
+          <Experience />
         </Route>
         <Route path="*">
           <PageNotFound />

@@ -26,7 +26,7 @@ class AppBar extends Component {
     return (
       <Grid container direction="row" className="AppBar">
         <NavBarButton name="Projects" href="/projects" />
-        <NavBarButton name="Experience" />
+        <NavBarButton name="Experience" href="/experience" />
         <NavBarButton name="Blog" />
       </Grid>
     );

@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Avatar, Box, Grid, IconButton, Typography } from "@material-ui/core";
+import {
+  Avatar,
+  Badge,
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
 import ResumePic from "./my-resume-pic-small.jpg";
 import "../App.scss";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -8,6 +16,9 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import AlternateEmailRoundedIcon from "@material-ui/icons/AlternateEmailRounded";
 class Landing extends Component {
   render() {
+    function handleAboutMe() {
+      console.log("heyyo");
+    }
     return (
       <>
         <Box
@@ -20,15 +31,46 @@ class Landing extends Component {
         >
           <Grid direction={"row"}>
             <Grid item>
-              <Avatar
-                style={{
-                  width: "8em",
-                  height: "8em",
-                  //   filter: "grayscale(80%)",
-                  margin: "10px",
+              <Badge
+                overlap="circular"
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right",
                 }}
-                src={ResumePic}
-              ></Avatar>
+                badgeContent={
+                  <Button
+                    style={{
+                      padding: "0px",
+                      margin: "0px",
+                      borderRadius: "30px",
+                    }}
+                    onClick={handleAboutMe}
+                  >
+                    <Typography
+                      variant="body1"
+                      style={{
+                        backgroundColor: "#202020",
+                        padding: "10px",
+                        borderRadius: "30px",
+                        fontFamily: "open sans, sans-serif",
+                        color: "#8685ef",
+                      }}
+                    >
+                      👋
+                    </Typography>
+                  </Button>
+                }
+              >
+                <Avatar
+                  style={{
+                    width: "8em",
+                    height: "8em",
+                    //   filter: "grayscale(80%)",
+                    margin: "10px",
+                  }}
+                  src={ResumePic}
+                ></Avatar>
+              </Badge>
             </Grid>
           </Grid>
         </Box>
@@ -58,6 +100,21 @@ class Landing extends Component {
         >
           Computer Science, Year 4
         </Typography>
+        <Box m={-1} />
+        {/* <Typography
+          variant="body2"
+          style={{
+            fontFamily: "open sans,sans-serif",
+            fontWeight: "300",
+            fontSize: "12px",
+            margin: "auto",
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "10px",
+          }}
+        >
+          HERIOT WATT UNIVERSITY
+        </Typography> */}
         <Box m={2} />
         <div
           style={{

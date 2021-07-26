@@ -1,8 +1,8 @@
-import { Box, Button, IconButton, Grid, Typography } from "@material-ui/core";
-import React, { Component } from "react";
+import { Box, Button, Grid, IconButton, Typography } from "@material-ui/core";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import React, { Component } from "react";
+import SingleExperience from "./singleExp";
 import "../App.scss";
-import SingleProject from "./singleProject";
 
 function NavBarButton(props) {
   return (
@@ -24,7 +24,8 @@ function NavBarButton(props) {
     </Grid>
   );
 }
-class ProjectsPage extends Component {
+
+class Experience extends Component {
   render() {
     return (
       <Box style={{ margin: "20px" }}>
@@ -43,11 +44,10 @@ class ProjectsPage extends Component {
             <HomeRoundedIcon />
           </IconButton>
           <div className="AppBarOther">
-            <NavBarButton name="Experience" href="/experience" />
+            <NavBarButton name="Projects" href="/projects" />
             <NavBarButton name="Blog" />
           </div>
         </Grid>
-        {/* Everything else comes here! */}
         <Box m={3} />
         <Typography
           variant="h3"
@@ -59,14 +59,14 @@ class ProjectsPage extends Component {
         >
           my
           <span id="subtitle">
-            <b>Projects</b>
+            <b>Experience</b>
           </span>
         </Typography>
         <Box m={3} />
-        <SingleProject />
+        <SingleExperience />
       </Box>
     );
   }
 }
 
-export default ProjectsPage;
+export default Experience;
