@@ -8,6 +8,7 @@ html {
   background-color: #333333;
   background-image: url("./Group\ 10.svg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Main {
@@ -17,6 +18,7 @@ html {
   border-radius: 20px;
   padding: 20px;
   margin-top: 20vh;
+  // width: max-content;
 }
 
 #subtitle {
