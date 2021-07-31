@@ -16,9 +16,6 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import AlternateEmailRoundedIcon from "@material-ui/icons/AlternateEmailRounded";
 class Landing extends Component {
   render() {
-    function handleAboutMe() {
-      console.log("heyyo");
-    }
     return (
       <>
         <Box
@@ -44,7 +41,7 @@ class Landing extends Component {
                       margin: "0px",
                       borderRadius: "30px",
                     }}
-                    onClick={handleAboutMe}
+                    href="/aboutMe"
                   >
                     <Typography
                       variant="body1"
@@ -100,22 +97,6 @@ class Landing extends Component {
         >
           Computer Science, Year 4
         </Typography>
-        <Box m={-1} />
-        {/* <Typography
-          variant="body2"
-          style={{
-            fontFamily: "open sans,sans-serif",
-            fontWeight: "300",
-            fontSize: "12px",
-            margin: "auto",
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "10px",
-          }}
-        >
-          HERIOT WATT UNIVERSITY
-        </Typography> */}
-        <Box m={2} />
         <div
           style={{
             margin: "auto",

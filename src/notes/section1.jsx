@@ -92,6 +92,7 @@ class Section1 extends Component {
           border: "5px solid #333333",
           marginBottom: "20px",
         }}
+        className="myNotes"
       >
         {/* <ButtonSpecial name="Projects" />
         <ButtonSpecial name="Experience" />
